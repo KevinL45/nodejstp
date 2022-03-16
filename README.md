@@ -24,7 +24,11 @@ export liste Contact Excel []  => K (soutien A)
 export contact format PDF [] => S  
 
 ## BDD 
-MongoDb [] => S
+MongoDb [K] => S
+- user project123
+- pass 3qvBumFuC212Zmjh
+
+Download local version of MongoDB: https://www.mongodb.com/try/download/community
 
 ## Entités
 Contact []  => A   
