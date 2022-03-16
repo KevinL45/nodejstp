@@ -19,7 +19,8 @@ associer contact à utilisateur (+ tard) [] => S
 Si user connecte -> afficher ses contacts sur page   accueil []  
 
 ## Features 
-generation QRCode (Vcard) []  => A  
+generation Vcard [X] => A
+generation QRCode  []  => A  
 export liste Contact Excel []  => K (soutien A)  
 export contact format PDF [] => S  
 
@@ -27,7 +28,7 @@ export contact format PDF [] => S
 MongoDb [] => S
 
 ## Entités
-Contact []  => A   
+Contact [X]  => A   
 { 
     firstName : string  
     surName: string  
