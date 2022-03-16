@@ -21,6 +21,12 @@ app.get('/contact/creer', (req, res) => {
 app.get("/contact/modifier",(req,res)=>{
     res.render('contact/update')
 })
+app.get('/utilisateur/connexion', (req, res) => {
+    res.render('user/connection')
+});
+app.get('/utilisateur/inscription', (req, res) => {
+    res.render('user/signup')
+});
 
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({
