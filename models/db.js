@@ -1,14 +1,15 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/ContactDB', {
+mongoose.connect(process.env.DB_URI, {
     newUserUrlParser: true
-},
-    err => {
-    if (!err){
-        console.log('Connection Success !')
-    } else {
-        console.log('Connection Error ' +err)
-    }
-})
+    useUnifiedTopology: true });
 
+const db = mongoose.connection;
+
+db.on('err', console.error.bind(console, 'connection error:'));
+db.once('open', function (){
+    console.log('Connected')
+});
+
+// Model
 require('./contact.model')
