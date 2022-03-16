@@ -23,6 +23,8 @@ export contact format PDF []
 
 ## BDD 
 MongoDb [K]
+- user project123
+- pass 3qvBumFuC212Zmjh
 
 ## Entités
 Contact []  
