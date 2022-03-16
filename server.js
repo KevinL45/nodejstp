@@ -3,17 +3,18 @@ const app = express();
 const bodyParser = require('body-parser')
 const mongodb = require('mongodb')
 
-//je recupère les vues
 app.set('views','./views')
-//J'indique que c'est un fichier ejs
 app.set('view engine','ejs')
 
-
+//Routes
 app.get('/', (req, res) => {
     res.render('home/home')
 });
 app.get('/contact', (req, res) => {
-    res.render('contact/contact')
+    res.render('contact/list')
+});
+app.get('/contact/creer', (req, res) => {
+    res.render('contact/create')
 });
 
 app.use(bodyParser.json()); 
