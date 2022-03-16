@@ -16,6 +16,9 @@ app.get('/contact', (req, res) => {
 app.get('/contact/creer', (req, res) => {
     res.render('contact/create')
 });
+app.get("/contact/modifier",(req,res)=>{
+    res.render('contact/update')
+})
 
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({
