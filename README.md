@@ -2,28 +2,37 @@
 # nodejstp
 
 # Developpeurs
-Kevin => K
-Serge => S
-Aurélien => A
+Kevin => K  
+Serge => S  
+Aurélien => A  
 
 ## To Do 
-SERVEUR [X]   
-Architecture MVC []  
-page d'accueil []  
-page afficher contact []  
-Page gestion contact (creer / modifier) []  
-systeme d'inscription (+ tard) []  
-associer contact à utilisateur (+ tard) []  
-Si user connecte -> afficher ses contacts sur page   accueil [K]  
+Serveur [X]   
+Router les pages html avec Resources HTTP [] => K
+Architecture MVC [] => A
+intégrer Bootstrap [] => K
+page d'accueil []  => K
+page afficher contact [] => K 
+Page gestion contact (creer / modifier) []  => K
+systeme d'inscription (+ tard) []  => A
+associer contact à utilisateur (+ tard) [] => S
+Si user connecte -> afficher ses contacts sur page   accueil []  
 
 ## Features 
-generation QRCode (Vcard) []  
-export liste Contact Excel []  
-export contact format PDF []
+generation QRCode (Vcard) []  => A
+export liste Contact Excel []  => K (soutien A)
+export contact format PDF [] => S
 
 ## BDD 
-MongoDb [K]
+MongoDb [] => S
 
 ## Entités
-Contact []  
-User (plus tard) [K]
+Contact []  => A
+    firstName : string
+    surName: string
+    mail : string
+    adress : string
+
+User (plus tard) []
+    contact: Contact[]
+    .....
