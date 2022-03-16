@@ -19,5 +19,12 @@ var contactSchema = new mongoose.Schema({
     }
 } );
 
+
+// export model:
 mongoose.model("Contact", contactSchema);
-module.exports = contactSchema
+module.exports = contactSchema;
+
+/**
+ * Alternative:
+ * module.exports = mongoose.model('Contact', contactSchema);
+ */
