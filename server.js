@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 app.get('/contact', (req, res) => {
     res.render('contact/list')
 });
+// reduced from 2 links: create and update to addOrEdit:
 app.get('/contact/creer', (req, res) => {
     res.render('contact/addOrEdit')
 });
