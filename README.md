@@ -26,6 +26,11 @@ MongoDb [K]
 - user project123
 - pass 3qvBumFuC212Zmjh
 
+Download local version of MongoDB: https://www.mongodb.com/try/download/community
+
+
+
+
 ## Entités
 Contact []  
 User (plus tard) [K]
