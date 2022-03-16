@@ -3,6 +3,48 @@ var router = express.Router();
 const mongoose = require('mongoose');
 const Contact = mongoose.model('Contact');
 
+/**
+ * Dummy data
+ */
+
+async function insertDummyContactData(){
+    try{
+        await Contact.insertMany([
+            {
+                "firstName":"One",
+                "lastName":"OneOne",
+                "email":"one@email.com",
+                "address":"One Address One apart"
+            },
+            {
+                "firstName":"Two",
+                "lastName":"TwoTwo",
+                "email":"Two@email.com",
+                "address":"Two Address Two apart"
+            },
+            {
+                "firstName":"Three",
+                "lastName":"ThreeThree",
+                "email":"Three@email.com",
+                "address":"Three Address Three apart"
+            },            {
+                "firstName":"Four",
+                "lastName":"FourFour",
+                "email":"Four@email.com",
+                "address":"Four Address Four apart"
+            },            {
+                "firstName":"Five",
+                "lastName":"FiveFive",
+                "email":"Five@email.com",
+                "address":"Five Address Five apart"
+            }
+        ]);
+    } catch (err) {
+        console.log('err' + err);
+    }
+}
+insertDummyContactData();
+
 
 router.get('/', (req, res) => {
     res.render('contact/addOrEdit',{
