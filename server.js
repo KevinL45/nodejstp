@@ -21,13 +21,15 @@ app.get('/', (req, res) => {
 
 app.set('views', path.join(__dirname, '/views/'))
 
-app.engine('hbs', exphbs({
+app.engine('hbs', exphbs.engine({
     handlebars: allowInsecurePrototypeAccess(handlebars),
-    extname: "hbs",
-    defaultLayout: "MainLayout",
-    layoutsDir: __dirname + "/views/layouts/",
+    extname: 'hbs',
+    defaultLayout: 'MainLayout',
+    layoutsDir: __dirname + '/views/layouts/',
     })
 );
+
+app.set("view engine", "hbs");
 
 app.listen(8000, () => {
     console.log('Serveur opérationnel');
