@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const body = require('body-parser')
+const bodyParser = require('body-parser')
 
 app.get('/', (req, res) => {
     res.set('Content-Type', 'text/html');
