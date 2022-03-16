@@ -22,11 +22,8 @@ app.get('/contact', (req, res) => {
     res.render('contact/list')
 });
 app.get('/contact/creer', (req, res) => {
-    res.render('contact/create')
+    res.render('contact/addOrEdit')
 });
-app.get("/contact/modifier",(req,res)=>{
-    res.render('contact/update')
-})
 app.get('/utilisateur/connexion', (req, res) => {
     res.render('user/connection')
 });
