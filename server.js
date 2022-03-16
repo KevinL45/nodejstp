@@ -4,30 +4,40 @@ const path = require('path');
 const handlebars = require('handlebars');
 const exphbs = require('express-handlebars');
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
-const bodyParser = require('body-parser');
 
 const app = express();
+const bodyParser = require('body-parser')
+const mongodb = require('mongodb')
+const expressLayouts = require('express-ejs-layouts')
 
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+app.use(expressLayouts)
+app.set('views','./views')
+app.set('view engine','ejs')
 
+//Routes
 app.get('/', (req, res) => {
-    res.send(`
-    <h2>Welcome to your Contact Database!</h2>
-    <h3>Accesser votre carnet de contacts ici <b> <a href="/contact/list">Database</a></b></h3>`)
+    res.render('home/home')
+});
+app.get('/contact', (req, res) => {
+    res.render('contact/list')
+});
+app.get('/contact/creer', (req, res) => {
+    res.render('contact/create')
+});
+app.get("/contact/modifier",(req,res)=>{
+    res.render('contact/update')
 })
+app.get('/utilisateur/connexion', (req, res) => {
+    res.render('user/connection')
+});
+app.get('/utilisateur/inscription', (req, res) => {
+    res.render('user/signup')
+});
 
-app.set('views', path.join(__dirname, '/views/'))
-
-app.engine('hbs', exphbs.engine({
-    handlebars: allowInsecurePrototypeAccess(handlebars),
-    extname: 'hbs',
-    defaultLayout: 'MainLayout',
-    layoutsDir: __dirname + '/views/layouts/',
-    })
-);
-
-app.set("view engine", "hbs");
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({
+        extended: true
+    }));
 
 app.listen(8000, () => {
 
