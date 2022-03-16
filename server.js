@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser')
 const mongodb = require('mongodb')
+const expressLayouts = require('express-ejs-layouts')
 
+app.use(expressLayouts)
 app.set('views','./views')
 app.set('view engine','ejs')
 
