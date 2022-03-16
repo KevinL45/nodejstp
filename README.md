@@ -14,7 +14,7 @@ page afficher contact []
 Page gestion contact (creer / modifier) []  
 systeme d'inscription (+ tard) []  
 associer contact à utilisateur (+ tard) []  
-Si user connecte -> afficher ses contacts sur page   accueil [K]  
+Si user connecte -> afficher ses contacts sur page   accueil []  
 
 ## Features 
 generation QRCode (Vcard) []  
@@ -22,8 +22,8 @@ export liste Contact Excel []
 export contact format PDF []
 
 ## BDD 
-MongoDb [K]
+MongoDb []
 
 ## Entités
 Contact []  
-User (plus tard) [K]
+User (plus tard) []
