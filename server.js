@@ -8,8 +8,6 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-
-
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -32,5 +30,6 @@ app.engine('hbs', exphbs.engine({
 app.set("view engine", "hbs");
 
 app.listen(8000, () => {
+
     console.log('Serveur opérationnel');
 });

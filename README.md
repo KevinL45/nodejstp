@@ -19,7 +19,8 @@ associer contact à utilisateur (+ tard) [] => S
 Si user connecte -> afficher ses contacts sur page   accueil []  
 
 ## Features 
-generation QRCode (Vcard) []  => A  
+generation Vcard [X] => A
+generation QRCode  []  => A  
 export liste Contact Excel []  => K (soutien A)  
 export contact format PDF [] => S  
 
@@ -31,7 +32,7 @@ MongoDb [K] => S
 Download local version of MongoDB: https://www.mongodb.com/try/download/community
 
 ## Entités
-Contact []  => A   
+Contact [X]  => A   
 { 
     firstName : string  
     surName: string  

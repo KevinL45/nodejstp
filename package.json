@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "no test"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,9 @@
     "save": "^2.4.0"
   },
   "devDependencies": {
-    "handlebars": "^4.7.7"
+    "handlebars": "^4.7.7",
+    "qrcode": "^1.5.0",
+    "vcard-creator": "^0.4.2"
   }
+  
 }
