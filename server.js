@@ -31,8 +31,13 @@ app.get('/contact', (req, res) => {
     let contacts = contactService.getAll()
     res.render('contact/list', {contacts : contacts})
 });
-// reduced from 2 links: create and update to addOrEdit:
-app.get('/contact/creer/', (req, res) => {
+
+app.post('/contact/creer/', (req, res) => {
+    
+    res.render('contact/addOrEdit', {contact: undefined})
+});
+
+app.get('/contact/modifier/', (req, res) => {
     res.render('contact/addOrEdit', {contact: undefined})
 });
 
