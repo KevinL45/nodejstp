@@ -45,7 +45,7 @@ app.get('/contact/detail/:id', (req, res) => {
     let ContactService = require('./services/ContactService')
     let contactService = new ContactService()
     let contact = contactService.getContact(req.params.id)
-    res.render('contact/addOrEdit', {contact: contact})
+    res.render('contact/details', {contact: contact})
 });
 
 app.get('/utilisateur/connexion', (req, res) => {

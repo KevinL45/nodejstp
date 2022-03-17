@@ -1,0 +1,16 @@
+<div class="row"></div>
+    <% if(contact != undefined){ %>
+        <div class="col-3 my-3 mx-2">
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                    <h5 class="card-title"><%= contact.firstName %> <%= contact.lastName %></h5>
+                    <p class="card-subtitle mb-2 text-muted">Prenom : <%= contact.firstName %></p>
+                    <p class="card-subtitle mb-2 text-muted">Nom : <%= contact.lastName %></p>
+                    <p class="card-subtitle mb-2 text-muted">E-mail : <%= contact.email %></p>
+                    <p class="card-subtitle mb-2 text-muted">Adresse : <%= contact.address %></p>
+
+                    <p class="card-text"><%= contact.firstName %></p>
+            </div>
+            </div>                
+        <% } %>  
+    </div>
