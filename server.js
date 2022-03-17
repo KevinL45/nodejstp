@@ -32,7 +32,6 @@ app.get('/contact', (req, res) => {
     res.render('contact/list', {contacts : contacts})
 });
 // reduced from 2 links: create and update to addOrEdit:
-<<<<<<< HEAD
 app.get('/contact/creer/', (req, res) => {
     res.render('contact/addOrEdit', {contact: undefined})
 });
@@ -42,10 +41,6 @@ app.get('/contact/detail/:id', (req, res) => {
     let contactService = new ContactService()
     let contact = contactService.getContact(req.params.id)
     res.render('contact/addOrEdit', {contact: contact})
-=======
-app.get('/contact/addOrEdit', (req, res) => {
-    res.render('contact/addOrEdit')
->>>>>>> branch-kev
 });
 
 app.get('/utilisateur/connexion', (req, res) => {
