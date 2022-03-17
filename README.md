@@ -1,8 +1,10 @@
 
-To run App:
+# To run App:
 
--- start the server using:
-node server.js
+## npm install 
+
+then start the server using:
+## node server.js
 
 and go to :
 http://localhost:8000
