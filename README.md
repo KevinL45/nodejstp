@@ -1,4 +1,12 @@
 
+To run App:
+
+-- start the server using:
+node server.js
+
+and go to :
+http://localhost:8000
+
 # nodejstp
 
 # Developpeurs
@@ -26,8 +34,6 @@ export contact format PDF [] => S
 
 ## BDD 
 MongoDb [K] => S
-- user project123
-- pass 3qvBumFuC212Zmjh
 
 Download local version of MongoDB: https://www.mongodb.com/try/download/community
 
