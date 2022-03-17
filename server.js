@@ -7,12 +7,17 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 
 const app = express();
 const bodyParser = require('body-parser')
-const mongodb = require('mongodb')
+const mongoose = require('mongoose')
 const expressLayouts = require('express-ejs-layouts')
 
 app.use(expressLayouts)
 app.set('views','./views')
 app.set('view engine','ejs')
+
+mongoose.connect('mongodb+srv://nodejstp:3qvBumFuC212Zmjh@cluster0.sub0n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser : true , useUnifiedTopology : true},
+() =>{
+    console.log('Connexion à la base de données')
+})
 
 //Routes
 app.get('/', (req, res) => {
