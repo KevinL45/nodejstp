@@ -7,7 +7,7 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 
 const app = express();
 const bodyParser = require('body-parser')
-const mongodb = require('mongodb')
+const mongoose = require('mongoose')
 const expressLayouts = require('express-ejs-layouts')
 
 
@@ -15,8 +15,14 @@ app.use(expressLayouts)
 app.set('views','./views')
 app.set('view engine','ejs')
 
+mongoose.connect('mongodb+srv://nodejstp:3qvBumFuC212Zmjh@cluster0.sub0n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser : true , useUnifiedTopology : true},
+() =>{
+    console.log('Connexion à la base de données')
+})
+
 //Routes
 app.get('/', (req, res) => {
+
     res.render('home/home')
 });
 app.get('/contact', (req, res) => {
@@ -26,6 +32,7 @@ app.get('/contact', (req, res) => {
     res.render('contact/list', {contacts : contacts})
 });
 // reduced from 2 links: create and update to addOrEdit:
+<<<<<<< HEAD
 app.get('/contact/creer/', (req, res) => {
     res.render('contact/addOrEdit', {contact: undefined})
 });
@@ -35,6 +42,10 @@ app.get('/contact/detail/:id', (req, res) => {
     let contactService = new ContactService()
     let contact = contactService.getContact(req.params.id)
     res.render('contact/addOrEdit', {contact: contact})
+=======
+app.get('/contact/addOrEdit', (req, res) => {
+    res.render('contact/addOrEdit')
+>>>>>>> branch-kev
 });
 
 app.get('/utilisateur/connexion', (req, res) => {
