@@ -24,9 +24,9 @@ describe('test', function () {
     let vCardContactMock =vCardGenerator.generate(contactMock)
     console.log(vCardContactMock)
 
-    // test 3
-    let qrCodeGenerator = new QrCodeGenerator()
-    qrCodeGenerator.generateToTempFile(vCardContactMock)
+    // // test 3
+    // let qrCodeGenerator = new QrCodeGenerator()
+    // qrCodeGenerator.generateToTempFile(vCardContactMock)
 
   
   });
