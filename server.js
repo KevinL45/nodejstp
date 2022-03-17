@@ -21,6 +21,7 @@ mongoose.connect('mongodb+srv://nodejstp:3qvBumFuC212Zmjh@cluster0.sub0n.mongodb
 
 //Routes
 app.get('/', (req, res) => {
+
     res.render('home/home')
 });
 app.get('/contact', (req, res) => {
