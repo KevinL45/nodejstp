@@ -1,19 +1,39 @@
 <form>
-    <div class="form-group">
-        <label>Nom</label>
-        <input type="text" class="form-control" placeholder="Entrez votre nom">
-    </div>
-    <div class="form-group">
-        <label>Prénom</label>
-        <input type="text" class="form-control" placeholder="Entrez votre prenom">
-    </div>
-    <div class="form-group">
-        <label>E-mail</label>
-        <input type="email" class="form-control" placeholder="Entrez votre e-mail">
-    </div>
-    <div class="form-group">
-        <label>Adresse</label>
-        <input type="text" class="form-control" placeholder="Entrez votre adresse">
-    </div>
-    <button type="submit" class="btn btn-primary">Valider</button>
+    <% if(contact != undefined){ %>
+        <div class="form-group">
+            <label>Nom</label>
+            <input type="text" class="form-control" placeholder="Entrez votre nom" value="<%= contact.firstName %>">
+        </div>
+        <div class="form-group">
+            <label>Prénom</label>
+            <input type="text" class="form-control" placeholder="Entrez votre prenom" value="<%= contact.lastName %>">
+        </div>
+        <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" class="form-control" placeholder="Entrez votre e-mail" value="<%= contact.email%>">
+        </div>
+        <div class="form-group">
+            <label>Adresse</label>
+            <input type="text" class="form-control" placeholder="Entrez votre adresse" value="<%= contact.address %>">
+        </div>
+        <button type="submit" class="btn btn-primary">Valider</button>
+      <% } else{ %>  
+        <div class="form-group">
+            <label>Nom</label>
+            <input type="text" class="form-control" placeholder="Entrez votre nom">
+        </div>
+        <div class="form-group">
+            <label>Prénom</label>
+            <input type="text" class="form-control" placeholder="Entrez votre prenom">
+        </div>
+        <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" class="form-control" placeholder="Entrez votre e-mail">
+        </div>
+        <div class="form-group">
+            <label>Adresse</label>
+            <input type="text" class="form-control" placeholder="Entrez votre adresse">
+        </div>
+        <button type="submit" class="btn btn-primary">Valider</button>
+     <% } %>
 </form>

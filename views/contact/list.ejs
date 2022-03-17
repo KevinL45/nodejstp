@@ -1,14 +1,23 @@
 
 
- <div class="row">
+<% if(contacts != undefined || contacts.length != 0){ %>
+  <% contacts.forEach(function(contact) { %>
+    <div class="row"></div>
     <div class="col-sm-3">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Kevin Lokoka</h5>
-          <a href="#" class="btn btn-primary">Voir</a>      
+          <h5 class="card-title"><%= contact.firstName %></h5>
+          <a href="/contact/detail/<%= contact._id %>" +  class="btn btn-primary">Voir</a>      
           <a href="#" class="btn btn-success">Modifier</a>
           <a href="#" class="btn btn-danger">Supprimer</a>
         </div>
       </div>
     </div>
   </div>
+  <% }); %> 
+<% } else{ %>  
+  <h2>You have any Contact</h2>
+<% } %>
+
+  
+ 
