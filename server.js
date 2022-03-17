@@ -11,6 +11,7 @@ const mongoose = require('mongoose')
 const expressLayouts = require('express-ejs-layouts')
 
 
+
 app.use(expressLayouts)
 app.set('views','./views')
 app.set('view engine','ejs')
@@ -23,21 +24,20 @@ mongoose.connect('mongodb+srv://nodejstp:3qvBumFuC212Zmjh@cluster0.sub0n.mongodb
 //Routes
 app.get('/', (req, res) => {
 
-    res.render('home/home')
-});
-app.get('/contact', (req, res) => {
     let ContactService = require('./services/ContactService')
     let contactService = new ContactService()
     let contacts = contactService.getAll()
-    res.render('contact/list', {contacts : contacts})
+    res.render('home/home', {contacts : contacts})
+});
+app.get('/contact', (req, res) => {
+    res.render('contact/list', {contacts : undefined})
 });
 
-app.post('/contact/creer/', (req, res) => {
-    
+app.get('/contact/creer', (req, res) => {
     res.render('contact/addOrEdit', {contact: undefined})
 });
 
-app.get('/contact/modifier/', (req, res) => {
+app.get('/contact/modifier', (req, res) => {
     res.render('contact/addOrEdit', {contact: undefined})
 });
 

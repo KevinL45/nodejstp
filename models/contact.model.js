@@ -21,10 +21,8 @@ var contactSchema = new mongoose.Schema({
 
 
 // export model:
-mongoose.model("Contact", contactSchema);
-module.exports = contactSchema;
+//mongoose.model("Contact", contactSchema);
+//module.exports = contactSchema;
 
-/**
- * Alternative:
- * module.exports = mongoose.model('Contact', contactSchema);
- */
+module.exports = mongoose.model('Contact', contactSchema);
+ 
