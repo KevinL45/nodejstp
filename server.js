@@ -35,6 +35,6 @@ mongoose.connect('mongodb+srv://nodejstp:3qvBumFuC212Zmjh@cluster0.sub0n.mongodb
 })
 
 app.listen(8000, () => {
-
+ 
     console.log('Serveur opérationnel');
 });

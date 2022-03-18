@@ -36,7 +36,4 @@ router.get('/contact/detail/:id', (req, res) => {
     qrCode.toDataURL(vcard.generate(contact),function (err,url){
         res.render('contact/details', {contact: contact, qrCode : url})
     })
-
-
-
 });

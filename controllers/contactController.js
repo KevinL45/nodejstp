@@ -13,3 +13,13 @@ exports.createContact = (req,res) => {
         return res.status(400).json({error})
     })
 }
+
+exports.getContact = (req,res) =>{
+    const id = req.body.id
+
+    Contact.findOne(id).then((contact)=>{
+        return res.status(201).json({contact})
+    }).catch((error)=>{
+        return res.status(400).json({error})
+    }) 
+}
