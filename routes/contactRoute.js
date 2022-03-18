@@ -3,6 +3,7 @@ const router = express.Router()
 const qrCode = require('qrcode');
 const VCardGenerator = require('../js/VCardGenerator');
 const ContactService = require('../services/ContactService')
+const ContactController = require('../controllers/contactController')
 
 
 module.exports = router
@@ -12,6 +13,7 @@ router.get('/', (req, res) => {
     let contacts = contactService.getAll()
     res.render('home/home', {contacts : contacts})
 });
+
 router.get('/contact', (req, res) => {
     res.render('contact/list', {contacts : undefined})
 });
@@ -19,6 +21,7 @@ router.get('/contact', (req, res) => {
 router.get('/contact/creer', (req, res) => {
     res.render('contact/addOrEdit', {contact: undefined})
 });
+router.post('/contact/creer', ContactController.createContact);
 
 router.get('/contact/modifier', (req, res) => {
     res.render('contact/addOrEdit', {contact: undefined})

@@ -15,6 +15,11 @@ const userRoute = require('./routes/userRoute')
 const app = express();
 
 
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({
+        extended: true
+    }));
+
 app.use(expressLayouts)
 app.use('/',contactRoute)
 app.use('/',userRoute)
@@ -22,10 +27,7 @@ app.use('/',userRoute)
 app.set('views','./views')
 app.set('view engine','ejs')
 
-app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({
-        extended: true
-    }));
+
 
 mongoose.connect('mongodb+srv://nodejstp:3qvBumFuC212Zmjh@cluster0.sub0n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser : true , useUnifiedTopology : true},
 () =>{

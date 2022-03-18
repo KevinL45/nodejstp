@@ -1,9 +1,9 @@
 var assert = require('assert');
 const Contact = require('../entities/Contact.js');
 const VCardGenerator = require ('../js/generator/VCardGenerator.js')
-const QrCodeGenerator = require ('../js/generator/QrCodeGenerator.js') 
-const mongoose = require('mongoose');
-const contactSchema = require('../models/contact.model');
+// const QrCodeGenerator = require ('../js/generator/QrCodeGenerator.js') 
+// const mongoose = require('mongoose');
+// const contactSchema = require('../models/contact.model');
 
 
 describe('test', function () {
