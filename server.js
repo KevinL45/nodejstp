@@ -9,7 +9,7 @@ const ContactService = require('./services/ContactService')
 const expressLayouts = require('express-ejs-layouts');
 const qrCode = require('qrcode');
 const { json } = require('express/lib/response');
-const VCardGenerator = require('./js/generator/VCardGenerator');
+const VCardGenerator = require('./js/VCardGenerator');
 
 const app = express();
 

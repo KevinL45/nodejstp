@@ -1,5 +1,5 @@
 const VCard =  require('vcard-creator').default
-const Contact = require('../../entities/Contact.js')
+const Contact = require('../entities/Contact.js')
 
 class VCardGenerator {
 

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var contactSchema = new mongoose.Schema({
+const contact = new mongoose.Schema({
     firstName:{
         type: String,
         required: 'This field is required'
@@ -21,8 +21,8 @@ var contactSchema = new mongoose.Schema({
 
 
 // export model:
-mongoose.model("Contact", contactSchema);
-module.exports = contactSchema;
+mongoose.model("Contact", contact);
+module.exports = contact;
 
 /**
  * Alternative:
